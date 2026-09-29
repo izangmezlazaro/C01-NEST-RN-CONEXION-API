@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, Text } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+
+const API_URL = 'http://10.254.139.245:3000';
 
 export default function App() {
+  const cargarMensaje = async () => {
+    const respuesta = await fetch(API_URL + '/mensaje');
+    const datos = await respuesta.json();
+    console.log(datos);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView>
+        <Text>Mi primera conexión</Text>
+
+        <Button
+          title="Conectar con Nest"
+          onPress={cargarMensaje}
+        />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
