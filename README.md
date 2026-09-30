@@ -3,6 +3,8 @@
 
 Repositorio con los 12 ejercicios correspondientes al **Cuaderno 01: Del endpoint a la pantalla**, conectando un backend en **NestJS** con una app móvil en **React Native (Expo)**.
 
+> 📖 **[Ver Guía Explicativa Completa y Puesta en Marcha (GUIA_EXPLICATIVA.md)](file:///c:/Users/izang/Pictures/dev/c/C01-NEST-RN-CONEXION-API/GUIA_EXPLICATIVA.md)**
+
 ---
 
 ## 📁 Estructura del repositorio
